@@ -1,0 +1,89 @@
+<!DOCTYPE.html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function validate()
+            {
+                var n = document.getElementById("test").value;
+                var p = document.getElementById("pass").value;
+                var e = document.getElementById("em").value;
+                var pn = document.getElementById("pho").value;
+
+                var up=RegExp("^[a-z]{5,11}$");
+                var pp=RegExp("^[a-z A-Z $ @ ! . _]{7,16}");
+                var ep=RegExp("^[a-z A-Z 0-9 _ .]{5,15}[@][a-z A-Z]{4,9}[.][a-z A-Z]{2,3}$");
+                var php=RegExp("(?=.*\d)(?=.[_.$!@])(?=.*[a-z]).{6,12}");
+                if(up.test(n)){
+                    if(pp.test(p)){
+                        if(ep.test(e)){
+                            if(php.test(pn)){
+                            }
+                            else{
+                                document.getElementById("msgph").innerHTML="Invalid Mobile Number!";
+                            }
+                        }
+                        else{
+                            document.getElementById("msge").innerHTML="Invalid Email!";
+                        }
+                    }
+                    else{
+                        document.getElementById("msgp").innerHTML="Invalid Password!";
+                    }
+                }
+                else{
+                    document.getElementById("msgn").innerHTML="Invalid Name!";
+                }
+
+            }
+        </script>
+</head>
+<body>
+    <div class="container">
+    <h1>registration form</h1>
+    <table border="2" class="table table-striped">
+        <form>
+        <tr>
+            <td>name</td>
+            <td><input id="test" type="text"><div id="msgn"></div></td>
+            
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input id="pass" type="password"><div id="msgp"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input id="em" type="email"><div id="msge"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td><input id="pho" type="phone"><div id="msgph"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td><textarea rows="4" col="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>city</td>
+            <td><select><option value="a">a</option>
+            <option value="b">b</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=2>
+            <input type="Button" value="Submit" onclick="validate()">
+            
+            </td>
+        </tr>
+        </form>
+        </table>
+    </div>
+</body>
+</html>
