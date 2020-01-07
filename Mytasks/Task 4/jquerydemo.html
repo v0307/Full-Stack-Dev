@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#a1").fadeIn();
+            });
+            $("#btn2").click(function(){
+                $("#a2").fadeOut();
+            });
+            $("#btn3").click(function(){
+                $("#a3").fadeToggle();
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <section>
+        <h1 id="a1"> Jquery FadeIn</h1>
+        </section>
+        <section>
+        <h1 id="a2"> Jquery FadeOut</h1>
+        </section>
+        <section>    
+        <h1 id="a3"> Jquery FadeToggle</h1>
+        </section>
+        <section>
+            <button id="btn1">FadeIn</button>
+            <button id="btn2">FadeOut</button>
+            <button id="btn3">FadeToggle</button>
+        </section>
+
+    </body>
+</html>

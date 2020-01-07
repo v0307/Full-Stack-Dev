@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#d1").css({"visibility":"visible"});
+                $("#d1").slideDown();
+            });
+            $("#btn2").click(function(){
+                $("#d2").slideUp();
+            });
+            $("#btn3").click(function(){
+                $("#d3").slideToggle();
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <section>
+            <button id="btn1">SlideDown</button>
+            <button id="btn2">SlideUp</button>
+            <button id="btn3">SlideToggle</button>
+        </section>
+            <div id="d1" style="visibility: hidden;">
+            <h1> Jquery Slide Down</h1>
+            </div>
+            <div id="d2">
+            <h1> Jquery SlideUp</h1>
+            </div>
+            <div id="d3">    
+            <h1> Jquery SlideToggle</h1>
+            </div>
+
+    </body>
+</html>
