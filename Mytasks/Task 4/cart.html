@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                var x = $("#t1").val();
+                var a = $("#c1").children().length;
+                $("#c1").append("<li class="+x+a+"><b>"+x+"&nbsp;&nbsp;&nbsp;</b><button id="+x+a+">Remove Item</button></li>");
+                $("#"+x+a+"").addClass('rb');
+                $("b").addClass('pc');
+               // var a = $("#c1").children().length;
+               // alert(a);    
+                $("button").click(function(){
+                    var t=($(this).attr('id'));
+                    $("."+t+"").remove();
+                    //alert(t);
+                });
+            });   
+            $("#btn2").click(function(){
+                    $("#c1").empty();
+                }); 
+        });
+        </script>
+        <style type="text/css">
+        br{content:' ';}
+        .rb{
+            background-color: darkred;
+            color: seashell;
+        }
+        .pc{
+            color:forestgreen;
+        }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: chocolate;">Cart</h1>
+        <input type="text" id="t1">
+        <div>
+        <button id="btn1" style="color:forestgreen">Add Item</button>
+        <button id="btn2" style="color:red"> Clear Cart</button>
+        </div>
+        <ol id="c1">
+            <li>hi</li>
+            <li>hello</li>
+        </ol>
+    </body>
+</html>

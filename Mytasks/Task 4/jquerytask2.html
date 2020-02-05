@@ -7,22 +7,19 @@
         <script>
         $(document).ready(function(){
             $("#btn1").mouseover(function(){
-                $("#d1").css({"visibility":"visible"});
-                $("#d1").slideDown();
+                $("#d1,#d2,#d3").css({"visibility":"visible"}).slideDown(1000);
             });
             $("#btn1").mouseout(function(){
-                $("#d1").slideUp();
+                $("#d1,#d2,#d3").slideUp();
             });
             $("#btn2").mouseover(function(){
-                $("#d2").css({"visibility":"visible"});
-                $("#d2").slideDown();
+                $("#d2").css({"visibility":"visible"}).slideDown(1000);
             });
             $("#btn2").mouseout(function(){
                 $("#d2").slideUp();
             });
             $("#btn3").mouseover(function(){
-                $("#d3").css({"visibility":"visible"});
-                $("#d3").slideDown();
+                $("#d3").css({"visibility":"visible"}).slideDown(1000);
             });
             $("#btn3").mouseout(function(){
                 $("#d3").slideUp();
